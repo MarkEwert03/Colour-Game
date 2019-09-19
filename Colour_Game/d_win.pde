@@ -1,9 +1,10 @@
-void lose() {
+void win() {
   //Background
-  background(navy);
+  background(violet);
   fill(white);
-  text("Too bad...", width/2, height/2);
-  
+  text("New High Score!", width/2, height/3);
+  text("You got " + highScore + " points", width/2, height*2/3);
+
   //Variable Resets
   score = 0;
   highScoreColor = grey;

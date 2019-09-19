@@ -1,6 +1,6 @@
-color c = #FF00FF;
+color c;
 int switchingColor = 0;
-int timer = 60;
+int delay = 60;
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 void intro() {
@@ -11,9 +11,9 @@ void intro() {
   else if (switchingColor == 4) c = blue;
   else if (switchingColor == 5) c = purple;
   else c = grey;
-  timer--;
-  if (timer < 0) {
-    timer = 60;
+  delay--;
+  if (delay < 0) {
+    delay = 60;
     if (switchingColor < 5) switchingColor++;
     else switchingColor = 0;
   }

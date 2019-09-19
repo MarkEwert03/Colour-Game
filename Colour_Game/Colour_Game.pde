@@ -36,10 +36,11 @@ void setup() {
 
   //Initializing Variables
   mode = INTRO;
+  timerLength = width*31/32;
 
   //Text
   textAlign(CENTER, CENTER);
-  textSize(100);
+  textSize(96);
 
   //Colour
   colorMode(HSB);
