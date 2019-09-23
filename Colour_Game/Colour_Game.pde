@@ -29,6 +29,13 @@ final int WIN   = 3;
 String[] words = {"red", "orange", "yellow", "green", "blue", "purple"};
 color[] colors = {red, orange, yellow, green, blue, purple};
 
+ArrayList<PImage> gif;
+int n = 0;
+String zero;
+
+//Other
+PFont font;
+
 //---------------------------------------------------------------------------------------------------------------------------------------
 void setup() {
   //Basic
@@ -36,17 +43,28 @@ void setup() {
 
   //Initializing Variables
   mode = INTRO;
-  timerLength = width*31/32;
+  timerLength = BARWIDTH;
 
   //Text
   textAlign(CENTER, CENTER);
-  textSize(96);
+  font = createFont("Swoosh.ttf", 120);
+  textFont(font);
 
   //Colour
   colorMode(HSB);
 
   //Shapes
   rectMode(CENTER);
+  imageMode(CENTER);
+  
+  //Gif
+  gif = new ArrayList<PImage>(46);
+  for (int i = 0; i <= 45; i++){
+    if (i < 10) zero = "0";
+    else zero = "";
+    PImage temp = loadImage("frame_" + zero + i + "_delay-0.08s.gif");
+    gif.add(temp);
+  }
 } //-------------------------------------------------------------------------------------------------------------------------------------
 
 void draw() {
