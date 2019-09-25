@@ -2,6 +2,10 @@ color myColor;
 int switchingColor = 0;
 int delay = 40;
 
+ArrayList<PImage> gif;
+int n = 0;
+String zero;
+
 //---------------------------------------------------------------------------------------------------------------------------------------
 void intro() {
   if      (switchingColor == 0) myColor = red;

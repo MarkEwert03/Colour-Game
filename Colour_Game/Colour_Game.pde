@@ -29,10 +29,6 @@ final int WIN   = 3;
 String[] words = {"red", "orange", "yellow", "green", "blue", "purple"};
 color[] colors = {red, orange, yellow, green, blue, purple};
 
-ArrayList<PImage> gif;
-int n = 0;
-String zero;
-
 //Other
 PFont font;
 
@@ -79,6 +75,6 @@ void draw() {
 void mousePressed() {
   if      (mode == INTRO) mode = GAME;
   else if (mode == GAME)  gameMousedPressed();
-  else if (mode == LOSE)  mode = INTRO;
-  else if (mode == WIN)   mode = INTRO;
+  else if (mode == LOSE)  loseMousedPressed();
+  else if (mode == WIN)   winMousedPressed();
 } //-------------------------------------------------------------------------------------------------------------------------------------
